@@ -1,0 +1,30 @@
+PRODUCTION MODEL INFORMATION
+================================================================================
+
+Model Type: XGBoost
+Training Date: 2025-12-19 12:10:35.176342
+Training Samples: 500
+Number of Features: 100
+
+Performance Metrics (from optimization):
+  ROC AUC: 0.7798
+  Average Precision: 0.4592
+  Combined Score: 1.2391
+
+Model Parameters:
+  n_estimators: 150
+  max_depth: 8
+  learning_rate: 0.05
+  random_state: 42
+  eval_metric: logloss
+  n_jobs: -1
+
+Feature Sets Used:
+  - baseline
+  - temporal
+  - aggregated
+
+Files Generated:
+  - data/models/best_model.pkl
+  - data/models/feature_names.json
+  - data/models/production_model_info.txt

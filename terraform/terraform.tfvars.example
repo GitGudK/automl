@@ -1,0 +1,51 @@
+# Example Terraform Variables File
+# Copy this file to terraform.tfvars and customize for your deployment
+
+# General Configuration
+project_name = "waystar"
+environment  = "dev"
+aws_region   = "us-east-1"
+
+# VPC Configuration
+vpc_cidr = "10.0.0.0/16"
+az_count = 2  # Number of availability zones (2 recommended for HA)
+
+# Allowed CIDR blocks for prediction service
+# Update this to restrict access to your IP range
+allowed_cidr_blocks = ["0.0.0.0/0"]  # WARNING: Open to all, change in production
+
+# ECS Task Resources - Optimization Service
+# Runs feature engineering experiments
+optimize_cpu    = 4096  # 4 vCPUs (recommended)
+optimize_memory = 8192  # 8 GB RAM (minimum for large datasets)
+
+# ECS Task Resources - Training Service
+# Trains the best model
+train_cpu    = 2048  # 2 vCPUs
+train_memory = 4096  # 4 GB RAM
+
+# ECS Task Resources - Prediction Service
+# Makes predictions on new data
+predict_cpu    = 1024  # 1 vCPU
+predict_memory = 2048  # 2 GB RAM
+
+# Long-running Prediction Service
+# Set to true to run prediction service continuously
+# Set to false to run as on-demand tasks
+enable_prediction_service = false
+prediction_service_count  = 1
+
+# CloudWatch Logs
+# Number of days to retain logs (7, 14, 30, 60, 90, etc.)
+log_retention_days = 30
+
+# Step Functions (Advanced)
+# Enable Step Functions for automated pipeline orchestration
+enable_stepfunctions = false
+
+# Additional Tags
+additional_tags = {
+  Owner       = "ML Team"
+  CostCenter  = "Data Science"
+  Compliance  = "HIPAA"
+}

@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.DS_Store
+.idea/
+.vscode
+.claude/
+
+# Ignore initial documentation and data files
+data/Feature Engineering Project (1).docx
+data/data_science_project_data.csv
+
+# Don't save model artifacts
+data/models/best_model.pkl

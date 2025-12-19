@@ -1,0 +1,30 @@
+# Prediction Service
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY feature_pipeline.py .
+COPY predict.py .
+
+# Create data directories
+RUN mkdir -p data/models data/predictions
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+
+# Expose port for potential API service
+EXPOSE 8000
+
+# Default command - run prediction on sample data
+CMD ["python", "predict.py", "--input", "data/sample_new_patients.csv", "--output", "data/predictions/predictions.csv", "--probabilities"]

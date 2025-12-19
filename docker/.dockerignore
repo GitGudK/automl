@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Data (mounted as volume)
+data/data_science_project_data.csv
+data/predictions/
+*.pkl
+*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (not needed in container)
+*.md
+docs/
+
+# Streamlit (not needed for microservices)
+streamlit/
+
+# Tests (not needed in production)
+tests/
+test_*.py
+debug_*.py
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Other scripts not needed
+generate_features.py
+app.py
+run_tests.py

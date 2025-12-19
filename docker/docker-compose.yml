@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # Feature Optimization Service
+  optimize:
+    build:
+      context: .
+      dockerfile: Dockerfile.optimize
+    container_name: automl-optimize
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python generate_features_optimized.py
+    profiles:
+      - optimize
+
+  # Model Training Service
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    container_name: automl-train
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python train_best_model.py --full
+    depends_on:
+      - optimize
+    profiles:
+      - train
+
+  # Prediction Service
+  predict:
+    build:
+      context: .
+      dockerfile: Dockerfile.predict
+    container_name: automl-predict
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
+    command: python predict.py --input data/data_science_project_data.csv --output data/predictions/predictions.csv --probabilities
+    depends_on:
+      - train
+    profiles:
+      - predict
+
+  # All-in-one pipeline
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    container_name: automl-pipeline
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    profiles:
+      - pipeline
+
+volumes:
+  data:
+    driver: local
