@@ -1,0 +1,42 @@
+"filename", "language", "Python", "JSON", "Markdown", "Ignore", "pip requirements", "Shell Script", "YAML", "comment", "blank", "total"
+"/Users/kris/Code/automl/README.md", "Markdown", 0, 0, 75, 0, 0, 0, 0, 0, 34, 109
+"/Users/kris/Code/automl/SETUP.md", "Markdown", 0, 0, 71, 0, 0, 0, 0, 0, 29, 100
+"/Users/kris/Code/automl/data/models/best_model_config.json", "JSON", 0, 123, 0, 0, 0, 0, 0, 0, 0, 123
+"/Users/kris/Code/automl/data/models/feature_names.json", "JSON", 0, 110, 0, 0, 0, 0, 0, 0, 0, 110
+"/Users/kris/Code/automl/data/models/optimization_log.json", "JSON", 0, 1918, 0, 0, 0, 0, 0, 0, 0, 1918
+"/Users/kris/Code/automl/debug_roc.py", "Python", 65, 0, 0, 0, 0, 0, 0, 13, 17, 95
+"/Users/kris/Code/automl/docker/.dockerignore", "Ignore", 0, 0, 0, 35, 0, 0, 0, 11, 11, 57
+"/Users/kris/Code/automl/docker/DOCKER.md", "Markdown", 0, 0, 244, 0, 0, 0, 0, 0, 102, 346
+"/Users/kris/Code/automl/docker/docker-compose.yml", "YAML", 0, 0, 0, 0, 0, 0, 58, 4, 6, 68
+"/Users/kris/Code/automl/docker/docker-run.sh", "Shell Script", 0, 0, 0, 0, 0, 91, 0, 7, 20, 118
+"/Users/kris/Code/automl/docs/APP_OVERVIEW.md", "Markdown", 0, 0, 294, 0, 0, 0, 0, 0, 86, 380
+"/Users/kris/Code/automl/docs/APP_USAGE.md", "Markdown", 0, 0, 275, 0, 0, 0, 0, 0, 85, 360
+"/Users/kris/Code/automl/docs/CONFIG_FORMAT.md", "Markdown", 0, 0, 128, 0, 0, 0, 0, 0, 37, 165
+"/Users/kris/Code/automl/docs/FEATURE_PIPELINE_GUIDE.md", "Markdown", 0, 0, 451, 0, 0, 0, 0, 0, 147, 598
+"/Users/kris/Code/automl/docs/INFERENCE_GUIDE.md", "Markdown", 0, 0, 417, 0, 0, 0, 0, 0, 145, 562
+"/Users/kris/Code/automl/docs/OPTIMIZATION_NOTES.md", "Markdown", 0, 0, 171, 0, 0, 0, 0, 0, 62, 233
+"/Users/kris/Code/automl/docs/PERFORMANCE_OPTIMIZATIONS.md", "Markdown", 0, 0, 203, 0, 0, 0, 0, 0, 71, 274
+"/Users/kris/Code/automl/docs/PRODUCTION_DEPLOYMENT.md", "Markdown", 0, 0, 509, 0, 0, 0, 0, 0, 158, 667
+"/Users/kris/Code/automl/docs/QUICK_START.md", "Markdown", 0, 0, 75, 0, 0, 0, 0, 0, 27, 102
+"/Users/kris/Code/automl/docs/README_INFERENCE.md", "Markdown", 0, 0, 155, 0, 0, 0, 0, 0, 53, 208
+"/Users/kris/Code/automl/eda/eda_dvars.py", "Python", 133, 0, 0, 0, 0, 0, 0, 23, 21, 177
+"/Users/kris/Code/automl/eda/eda_ivars.py", "Python", 117, 0, 0, 0, 0, 0, 0, 18, 22, 157
+"/Users/kris/Code/automl/feature_pipeline.py", "Python", 313, 0, 0, 0, 0, 0, 0, 129, 102, 544
+"/Users/kris/Code/automl/generate_features.py", "Python", 585, 0, 0, 0, 0, 0, 0, 108, 135, 828
+"/Users/kris/Code/automl/generate_features_optimized.py", "Python", 570, 0, 0, 0, 0, 0, 0, 429, 145, 1144
+"/Users/kris/Code/automl/generate_synthetic_data.py", "Python", 102, 0, 0, 0, 0, 0, 0, 21, 25, 148
+"/Users/kris/Code/automl/predict.py", "Python", 239, 0, 0, 0, 0, 0, 0, 76, 65, 380
+"/Users/kris/Code/automl/requirements.txt", "pip requirements", 0, 0, 0, 0, 7, 0, 0, 0, 0, 7
+"/Users/kris/Code/automl/run_tests.py", "Python", 36, 0, 0, 0, 0, 0, 0, 15, 15, 66
+"/Users/kris/Code/automl/streamlit/README.md", "Markdown", 0, 0, 199, 0, 0, 0, 0, 0, 59, 258
+"/Users/kris/Code/automl/streamlit/requirements.txt", "pip requirements", 0, 0, 0, 0, 2, 0, 0, 0, 0, 2
+"/Users/kris/Code/automl/streamlit/streamlit_app.py", "Python", 1318, 0, 0, 0, 0, 0, 0, 206, 301, 1825
+"/Users/kris/Code/automl/streamlit/test_import.py", "Python", 30, 0, 0, 0, 0, 0, 0, 2, 7, 39
+"/Users/kris/Code/automl/terraform/README.md", "Markdown", 0, 0, 398, 0, 0, 0, 0, 0, 123, 521
+"/Users/kris/Code/automl/terraform/deploy.sh", "Shell Script", 0, 0, 0, 0, 0, 202, 0, 21, 31, 254
+"/Users/kris/Code/automl/tests/README.md", "Markdown", 0, 0, 201, 0, 0, 0, 0, 0, 57, 258
+"/Users/kris/Code/automl/tests/__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 3, 1, 4
+"/Users/kris/Code/automl/tests/test_app.py", "Python", 75, 0, 0, 0, 0, 0, 0, 10, 20, 105
+"/Users/kris/Code/automl/tests/test_feature_pipeline.py", "Python", 254, 0, 0, 0, 0, 0, 0, 30, 54, 338
+"/Users/kris/Code/automl/train_best_model.py", "Python", 174, 0, 0, 0, 0, 0, 0, 36, 57, 267
+"Total", "-", 4011, 2151, 3866, 35, 9, 293, 58, 1162, 2330, 13915

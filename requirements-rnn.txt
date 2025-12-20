@@ -1,0 +1,14 @@
+# RNN-specific requirements for AutoML project
+# Install with: pip install -r requirements-rnn.txt
+
+# PyTorch - Core deep learning framework for RNN models
+# GPU acceleration:
+#   - Apple Silicon (M1/M2/M3/M4): MPS backend included, works automatically
+#   - NVIDIA GPU: Install CUDA version from https://pytorch.org/get-started/locally/
+#   - Note: CUDA is NOT available on Mac (NVIDIA GPUs only)
+torch>=2.0.0
+
+# Base requirements (also needed for RNN functionality)
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0

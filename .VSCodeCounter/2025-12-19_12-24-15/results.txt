@@ -1,0 +1,79 @@
+Date : 2025-12-19 12:24:15
+Directory : /Users/kris/Code/automl
+Total : 40 files,  10423 codes, 1162 comments, 2330 blanks, all 13915 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Python           |         15 |      4,011 |      1,119 |        987 |      6,117 |
+| Markdown         |         16 |      3,866 |          0 |      1,275 |      5,141 |
+| JSON             |          3 |      2,151 |          0 |          0 |      2,151 |
+| Shell Script     |          2 |        293 |         28 |         51 |        372 |
+| YAML             |          1 |         58 |          4 |          6 |         68 |
+| Ignore           |          1 |         35 |         11 |         11 |         57 |
+| pip requirements |          2 |          9 |          0 |          0 |          9 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                          |         40 |     10,423 |      1,162 |      2,330 |     13,915 |
+| . (Files)                                                  |         11 |      2,237 |        827 |        624 |      3,688 |
+| data                                                       |          3 |      2,151 |          0 |          0 |      2,151 |
+| data/models                                                |          3 |      2,151 |          0 |          0 |      2,151 |
+| docker                                                     |          4 |        428 |         22 |        139 |        589 |
+| docs                                                       |         10 |      2,678 |          0 |        871 |      3,549 |
+| eda                                                        |          2 |        250 |         41 |         43 |        334 |
+| streamlit                                                  |          4 |      1,549 |        208 |        367 |      2,124 |
+| terraform                                                  |          2 |        600 |         21 |        154 |        775 |
+| tests                                                      |          4 |        530 |         43 |        132 |        705 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                   | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/kris/Code/automl/README.md                          | Markdown         |         75 |          0 |         34 |        109 |
+| /Users/kris/Code/automl/SETUP.md                           | Markdown         |         71 |          0 |         29 |        100 |
+| /Users/kris/Code/automl/data/models/best_model_config.json | JSON             |        123 |          0 |          0 |        123 |
+| /Users/kris/Code/automl/data/models/feature_names.json     | JSON             |        110 |          0 |          0 |        110 |
+| /Users/kris/Code/automl/data/models/optimization_log.json  | JSON             |      1,918 |          0 |          0 |      1,918 |
+| /Users/kris/Code/automl/debug_roc.py                       | Python           |         65 |         13 |         17 |         95 |
+| /Users/kris/Code/automl/docker/.dockerignore               | Ignore           |         35 |         11 |         11 |         57 |
+| /Users/kris/Code/automl/docker/DOCKER.md                   | Markdown         |        244 |          0 |        102 |        346 |
+| /Users/kris/Code/automl/docker/docker-compose.yml          | YAML             |         58 |          4 |          6 |         68 |
+| /Users/kris/Code/automl/docker/docker-run.sh               | Shell Script     |         91 |          7 |         20 |        118 |
+| /Users/kris/Code/automl/docs/APP_OVERVIEW.md               | Markdown         |        294 |          0 |         86 |        380 |
+| /Users/kris/Code/automl/docs/APP_USAGE.md                  | Markdown         |        275 |          0 |         85 |        360 |
+| /Users/kris/Code/automl/docs/CONFIG_FORMAT.md              | Markdown         |        128 |          0 |         37 |        165 |
+| /Users/kris/Code/automl/docs/FEATURE_PIPELINE_GUIDE.md     | Markdown         |        451 |          0 |        147 |        598 |
+| /Users/kris/Code/automl/docs/INFERENCE_GUIDE.md            | Markdown         |        417 |          0 |        145 |        562 |
+| /Users/kris/Code/automl/docs/OPTIMIZATION_NOTES.md         | Markdown         |        171 |          0 |         62 |        233 |
+| /Users/kris/Code/automl/docs/PERFORMANCE_OPTIMIZATIONS.md  | Markdown         |        203 |          0 |         71 |        274 |
+| /Users/kris/Code/automl/docs/PRODUCTION_DEPLOYMENT.md      | Markdown         |        509 |          0 |        158 |        667 |
+| /Users/kris/Code/automl/docs/QUICK_START.md                | Markdown         |         75 |          0 |         27 |        102 |
+| /Users/kris/Code/automl/docs/README_INFERENCE.md           | Markdown         |        155 |          0 |         53 |        208 |
+| /Users/kris/Code/automl/eda/eda_dvars.py                   | Python           |        133 |         23 |         21 |        177 |
+| /Users/kris/Code/automl/eda/eda_ivars.py                   | Python           |        117 |         18 |         22 |        157 |
+| /Users/kris/Code/automl/feature_pipeline.py                | Python           |        313 |        129 |        102 |        544 |
+| /Users/kris/Code/automl/generate_features.py               | Python           |        585 |        108 |        135 |        828 |
+| /Users/kris/Code/automl/generate_features_optimized.py     | Python           |        570 |        429 |        145 |      1,144 |
+| /Users/kris/Code/automl/generate_synthetic_data.py         | Python           |        102 |         21 |         25 |        148 |
+| /Users/kris/Code/automl/predict.py                         | Python           |        239 |         76 |         65 |        380 |
+| /Users/kris/Code/automl/requirements.txt                   | pip requirements |          7 |          0 |          0 |          7 |
+| /Users/kris/Code/automl/run_tests.py                       | Python           |         36 |         15 |         15 |         66 |
+| /Users/kris/Code/automl/streamlit/README.md                | Markdown         |        199 |          0 |         59 |        258 |
+| /Users/kris/Code/automl/streamlit/requirements.txt         | pip requirements |          2 |          0 |          0 |          2 |
+| /Users/kris/Code/automl/streamlit/streamlit_app.py         | Python           |      1,318 |        206 |        301 |      1,825 |
+| /Users/kris/Code/automl/streamlit/test_import.py           | Python           |         30 |          2 |          7 |         39 |
+| /Users/kris/Code/automl/terraform/README.md                | Markdown         |        398 |          0 |        123 |        521 |
+| /Users/kris/Code/automl/terraform/deploy.sh                | Shell Script     |        202 |         21 |         31 |        254 |
+| /Users/kris/Code/automl/tests/README.md                    | Markdown         |        201 |          0 |         57 |        258 |
+| /Users/kris/Code/automl/tests/__init__.py                  | Python           |          0 |          3 |          1 |          4 |
+| /Users/kris/Code/automl/tests/test_app.py                  | Python           |         75 |         10 |         20 |        105 |
+| /Users/kris/Code/automl/tests/test_feature_pipeline.py     | Python           |        254 |         30 |         54 |        338 |
+| /Users/kris/Code/automl/train_best_model.py                | Python           |        174 |         36 |         57 |        267 |
+| Total                                                      |                  |     10,423 |      1,162 |      2,330 |     13,915 |
++------------------------------------------------------------+------------------+------------+------------+------------+------------+

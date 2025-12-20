@@ -1,0 +1,182 @@
+[
+  {
+    "iteration": 17,
+    "model_type": "rnn",
+    "max_seq_length": 50,
+    "n_features": 24,
+    "results": [
+      {
+        "model_name": "LSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": false,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5633333333333334,
+        "avg_precision": 0.14077906730270154,
+        "combined_score": 0.7041124006360349,
+        "iteration": 17,
+        "training_time": 4.782551050186157
+      },
+      {
+        "model_name": "BiLSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": true,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.6522222222222223,
+        "avg_precision": 0.20576418772247146,
+        "combined_score": 0.8579864099446937,
+        "iteration": 17,
+        "training_time": 6.624921083450317
+      },
+      {
+        "model_name": "GRU",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "gru",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": false,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5411111111111111,
+        "avg_precision": 0.14226590663087726,
+        "combined_score": 0.6833770177419883,
+        "iteration": 17,
+        "training_time": 3.0545809268951416
+      },
+      {
+        "model_name": "AttentionLSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "attention_lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": true,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5533333333333333,
+        "avg_precision": 0.173566922672236,
+        "combined_score": 0.7269002560055693,
+        "iteration": 17,
+        "training_time": 4.527515888214111
+      }
+    ],
+    "timestamp": "2025-12-20T11:39:16.931469",
+    "duration_seconds": 19.182024002075195
+  },
+  {
+    "iteration": 17,
+    "model_type": "rnn",
+    "max_seq_length": 100,
+    "n_features": 24,
+    "results": [
+      {
+        "model_name": "LSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": false,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5155555555555555,
+        "avg_precision": 0.15164909365111126,
+        "combined_score": 0.6672046492066668,
+        "iteration": 17,
+        "training_time": 4.696387767791748
+      },
+      {
+        "model_name": "BiLSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": true,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5555555555555556,
+        "avg_precision": 0.12415955323148241,
+        "combined_score": 0.679715108787038,
+        "iteration": 17,
+        "training_time": 10.159076929092407
+      },
+      {
+        "model_name": "GRU",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "gru",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": false,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5955555555555555,
+        "avg_precision": 0.15627545011866373,
+        "combined_score": 0.7518310056742192,
+        "iteration": 17,
+        "training_time": 3.8990190029144287
+      },
+      {
+        "model_name": "AttentionLSTM",
+        "model_type": "rnn",
+        "params": {
+          "model_type": "attention_lstm",
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout": 0.3,
+          "bidirectional": true,
+          "n_epochs": 50,
+          "batch_size": 32,
+          "patience": 10,
+          "random_state": 42
+        },
+        "roc_auc": 0.5844444444444443,
+        "avg_precision": 0.24332857011017928,
+        "combined_score": 0.8277730145546236,
+        "iteration": 17,
+        "training_time": 7.263819694519043
+      }
+    ],
+    "timestamp": "2025-12-20T11:40:35.892560",
+    "duration_seconds": 26.21471619606018
+  }
+]

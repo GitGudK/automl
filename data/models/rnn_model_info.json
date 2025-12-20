@@ -1,0 +1,23 @@
+{
+  "model_name": "AttentionLSTM",
+  "model_type": "rnn",
+  "training_date": "2025-12-20T11:41:47.678660",
+  "training_samples": 500,
+  "max_seq_length": 100,
+  "n_features": 24,
+  "params": {
+    "model_type": "attention_lstm",
+    "hidden_size": 64,
+    "num_layers": 2,
+    "dropout": 0.3,
+    "bidirectional": true,
+    "n_epochs": 100,
+    "batch_size": 32,
+    "patience": 20,
+    "random_state": 42
+  },
+  "class_distribution": {
+    "negative": 449,
+    "positive": 51
+  }
+}

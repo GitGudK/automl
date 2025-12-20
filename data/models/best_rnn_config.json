@@ -1,0 +1,48 @@
+{
+  "model_name": "AttentionLSTM",
+  "model_type": "rnn",
+  "combined_score": 0.8277730145546236,
+  "roc_auc": 0.5844444444444443,
+  "avg_precision": 0.24332857011017928,
+  "params": {
+    "model_type": "attention_lstm",
+    "hidden_size": 64,
+    "num_layers": 2,
+    "dropout": 0.3,
+    "bidirectional": true,
+    "n_epochs": 50,
+    "batch_size": 32,
+    "patience": 10,
+    "random_state": 42
+  },
+  "max_seq_length": 100,
+  "n_features": 24,
+  "preprocessor_config": {
+    "max_seq_length": 100,
+    "padding": "post",
+    "truncating": "pre",
+    "scaler_type": "standard",
+    "feature_columns": null,
+    "metric_types": [
+      "bodyTemp",
+      "bpLower",
+      "bpUpper",
+      "cardiacMarker",
+      "immatureCount",
+      "immaturePct",
+      "infectionMarker",
+      "inflammMarker",
+      "lactateLevel",
+      "leucocyteCount",
+      "liverEnzA",
+      "liverEnzB",
+      "natriureticPeptide",
+      "pltCount",
+      "pulseRate",
+      "renalMarker",
+      "tempC",
+      "tempF"
+    ],
+    "n_features": 24
+  }
+}
