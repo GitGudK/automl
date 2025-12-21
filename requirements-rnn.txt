@@ -3,9 +3,14 @@
 
 # PyTorch - Core deep learning framework for RNN models
 # GPU acceleration:
-#   - Apple Silicon (M1/M2/M3/M4): MPS backend included, works automatically
+#   - Apple Silicon (M1/M2/M3/M4): MPS backend has stability issues with RNNs,
+#     CPU is used by default. MPS can be enabled explicitly if needed.
 #   - NVIDIA GPU: Install CUDA version from https://pytorch.org/get-started/locally/
 #   - Note: CUDA is NOT available on Mac (NVIDIA GPUs only)
+#
+# Known issues:
+#   - Python 3.14+: XGBoost conflicts with PyTorch causing segmentation faults.
+#     Use --rnn-only mode or Python 3.11 for full compatibility.
 torch>=2.0.0
 
 # Base requirements (also needed for RNN functionality)

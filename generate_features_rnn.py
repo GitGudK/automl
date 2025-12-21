@@ -6,23 +6,37 @@ alongside traditional tree-based models. RNNs can capture temporal patterns
 in the sequential observation data that may be missed by feature-based approaches.
 
 Key Features:
-- Trains both traditional models (RF, XGBoost) and RNN models (LSTM, GRU)
-- Uses raw sequences for RNN and engineered features for tree-based models
-- Compares performance across all model types
-- Saves the best model regardless of type
+- Trains RNN models: LSTM, BiLSTM, GRU, and AttentionLSTM
+- Uses raw observation sequences (ordered by timestamp) for RNN training
+- Compares performance across all model types using ROC AUC + Average Precision
+- Saves the best performing model configuration
+
+Available RNN Models:
+- LSTM: Standard Long Short-Term Memory network
+- BiLSTM: Bidirectional LSTM (captures forward and backward patterns)
+- GRU: Gated Recurrent Unit (fewer parameters, faster training)
+- AttentionLSTM: LSTM with attention mechanism for interpretability
+
+Requirements:
+- PyTorch >= 2.0.0 (pip install torch)
+- Note: XGBoost has known conflicts with PyTorch on Python 3.14+
+  Use --rnn-only mode or Python 3.11 for full compatibility
 
 Usage:
-    # Run with default settings (includes RNNs)
-    python generate_features_rnn.py
-
-    # Run with only traditional models
-    python generate_features_rnn.py --no-rnn
-
-    # Run with only RNN models
+    # Run with only RNN models (recommended for Python 3.14+)
     python generate_features_rnn.py --rnn-only
 
-    # Specify RNN hyperparameters
-    python generate_features_rnn.py --hidden-size 128 --num-layers 3
+    # Run with default settings (traditional + RNN models)
+    python generate_features_rnn.py
+
+    # Run with only traditional models (no RNNs)
+    python generate_features_rnn.py --no-rnn
+
+    # Customize sequence length
+    python generate_features_rnn.py --rnn-only --max-seq-length 150
+
+    # Run for a specific duration
+    python generate_features_rnn.py --duration 30
 """
 
 import os
