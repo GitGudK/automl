@@ -14,7 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all application files needed for pipeline
 COPY feature_pipeline.py .
-COPY app_optimized.py .
 COPY generate_features_optimized.py .
 COPY train_best_model.py .
 COPY predict.py .

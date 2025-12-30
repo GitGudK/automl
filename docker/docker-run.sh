@@ -4,6 +4,9 @@
 
 set -e
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Colors for output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -24,11 +27,20 @@ print_info() {
     echo -e "${YELLOW}ℹ $1${NC}"
 }
 
-# Check if docker-compose is available
-if ! command -v docker-compose &> /dev/null; then
-    echo "Error: docker-compose not found. Please install Docker Compose."
+# Check if docker compose (v2) or docker-compose (v1) is available
+if command -v docker &> /dev/null && docker compose version &> /dev/null; then
+    COMPOSE_CMD="docker compose"
+elif command -v docker-compose &> /dev/null; then
+    COMPOSE_CMD="docker-compose"
+else
+    echo "Error: Docker Compose not found. Please install Docker Compose."
     exit 1
 fi
+
+# Function to run compose commands from the docker directory
+run_compose() {
+    cd "$SCRIPT_DIR" && $COMPOSE_CMD "$@"
+}
 
 # Display help
 show_help() {
@@ -59,49 +71,49 @@ case "$1" in
     all|pipeline)
         print_header "Running Complete ML Pipeline"
         print_info "This will run: Optimization -> Training -> Prediction"
-        docker-compose --profile pipeline up
+        run_compose --profile pipeline up
         print_success "Pipeline completed!"
         print_info "Check data/predictions/predictions.csv for results"
         ;;
 
     optimize)
         print_header "Running Feature Optimization"
-        docker-compose --profile optimize up
+        run_compose --profile optimize up
         print_success "Optimization completed!"
         print_info "Check data/models/best_model_config.json"
         ;;
 
     train)
         print_header "Running Model Training"
-        docker-compose --profile train up
+        run_compose --profile train up
         print_success "Training completed!"
         print_info "Check data/models/best_model.pkl"
         ;;
 
     predict)
         print_header "Running Prediction Service"
-        docker-compose --profile predict up
+        run_compose --profile predict up
         print_success "Predictions completed!"
         print_info "Check data/predictions/predictions.csv"
         ;;
 
     build)
         print_header "Building Docker Images"
-        docker-compose build --parallel
+        run_compose build --parallel
         print_success "All images built successfully!"
         ;;
 
     clean)
         print_header "Cleaning Up Docker Resources"
-        docker-compose down --rmi all -v
+        run_compose down --rmi all -v
         print_success "Cleanup completed!"
         ;;
 
     logs)
         if [ -n "$2" ]; then
-            docker-compose logs -f "$2"
+            run_compose logs -f "$2"
         else
-            docker-compose logs
+            run_compose logs
         fi
         ;;
 

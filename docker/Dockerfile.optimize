@@ -14,7 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application files
 COPY feature_pipeline.py .
-COPY app_optimized.py .
 COPY generate_features_optimized.py .
 
 # Create data directories
